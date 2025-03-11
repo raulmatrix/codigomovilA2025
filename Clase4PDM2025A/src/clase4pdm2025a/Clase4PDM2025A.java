@@ -54,10 +54,57 @@ public class Clase4PDM2025A {
         
         //lista dinamicas
         ArrayList <Integer> lista = new ArrayList<Integer>();
-        lista.add(15);
+        //ArrayList <String> lista2 = new ArrayList<String>();
+        lista.add(15); //insertar al final
         lista.add(50);
         lista.add(30);
+        System.out.println(""+lista.get(2));
       
+        lista.add(2, 100); //adicion con indice
+        System.out.println(""+lista.get(2));
+        
+        //20,25,30,35,40,45,46
+        //si existe
+        System.out.println("Existe?: "+lista.contains(50));
+        
+        //saber si la lista esta vacia
+        System.out.println("Esta vacia: "+lista.isEmpty());
+        
+        System.out.println("Posicion de 50: "+lista.indexOf(50));
+        
+        lista.remove(1); //remover como tal el elemento
+        
+        System.out.println("Lista"+lista);
+        //tamaño
+        System.out.println("Tamaño "+lista.size());
+        
+        lista.set(1, 200);
+        
+        //ejercicio
+        String datos[] = {
+            "Jose Perez Sotelo",
+            "Alicia Ampuero Gonzales",
+            "Ana Salazar Contreras",
+            "Sergio Veliz Zeballos",
+            "Arnold Caceres Cembo"
+        };
+
+        for (int i = 0; i < datos.length; i++) {
+            String nombreCompleto = datos[i].toLowerCase(); 
+            String[] partes = nombreCompleto.split(" ");
+
+            String inicialNombre = partes[0].substring(0, 1); 
+            String primerApellido = partes[1];
+            String inicialSegundoApellido = partes[2].substring(0, 1);
+
+            String correo = inicialNombre + primerApellido + inicialSegundoApellido;
+            System.out.println(correo + "@incos.edu");
+        } 
+        
+        
+        
+        
+        
         
     }
     
